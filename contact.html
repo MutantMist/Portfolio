@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Contacts</title>
+    <title>Contact Me</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -20,99 +20,47 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
     <main class="main-aboutpage">
 
         <!-- Header -->
         <header class="header-area">
             <div class="container">
                 <div class="gx-row d-flex align-items-center justify-content-between">
+                    <!-- Logo linking to home -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/MyLogo.png" alt="Logo" height="100" width="400">
+                        <img src="assets/images/MyLogo.png" alt="MyLogo">
                     </a>
-
-                    <nav class="navbar">
+        
+                    <!-- Menu Toggle for Mobile Views -->
+                    <div class="menu-toggle">
+                        <div class="show-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+        
+                    <!-- Navigation Menu -->
+                    <nav class="navbar" id="navbar">
                         <ul class="menu">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="works.html">Works</a></li>
+                            <li><a href="about.html">About Me</a></li>
+                            <li><a href="project.html">Projects</a></li>
                             <li class="active"><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
-                    <div class="show-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                 </div>
             </div>
         </header>
 
-        <!-- Contact -->
-        <section class="contact-area">
-            <div class="container">
-                <div class="gx-row d-flex justify-content-center gap-24" >
-                    <div class="contact-infos">
-                        <h3 data-aos="fade-up">Contact Info</h3>
-                        <ul class="contact-details">
-                            <li class="d-flex align-items-center" data-aos="zoom-in">
-                                <div>
-                                    <img src="assets/images/email.png" width="70" height="70">
-                                </div>
-                                <div class="right">
-                                    <span>MAIL me</span>
-                                    <h4><p><a href="mailto:MutantMist@outlook.com" style="color: #07fdb1">MutantMist@Outlook.com</a></p></h4>
-                                </div>
-                            </li>
-                            <li class="d-flex align-items-center" data-aos="zoom-in">
-                                <div>
-                                    <img src="assets/images/location.png" width="70" height="70">
-                                </div>
-                                <div class="right">
-                                    <span>Location</span>
-                                    <h4><a>Pune, <br> Maharashtra,<br> India</a></h4>
-                                </div>
-                            </li>
-                            <!-- <li class="d-flex align-items-center" data-aos="zoom-in">
-                                <div class="icon-box shadow-box">
-                                    <i class="iconoir-phone"></i>
-                                </div>
-                                <div class="right">
-                                    <span>Contact Me</span>
-                                    <h4>0000000000</h4>
-                                </div>
-                            </li> -->                            
-                        </ul>
-                        <h3 data-aos="fade-up">Social Info</h3>
-                        <ul class="social-links d-flex align-center" data-aos="zoom-in">
-                            <li>
-                                <a href="https://www.youtube.com/@MutantMist-Dev/" target="_blank">
-                                    <img src="assets/images/youtube.png" alt="Youtube Icon">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/nishant-padalwar-5b2862295/" target="_blank">
-                                    <img src="assets/images/linkedin.png" alt="Youtube Icon" height="60" width="60">
-                                </a>
-                            </li>
-                            <li><a href="https://www.instagram.com/mutantmist/" target="_blank">
-                                <img src="assets/images/instagram.png" alt="Instagram Icon" height="60" width="60">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>                    
-                </div>
-            </div>
-        </section>
+        
+
+        <div><canvas></canvas></div>
     </main>
-    
 
     <script src="assets/js/jquery-3.6.4.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/aos.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
 </body>
-
-<!-- Mirrored from wpriverthemes.com/landing/gridx-html/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Sep 2023 16:25:46 GMT -->
 </html>

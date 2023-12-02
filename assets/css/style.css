@@ -18,8 +18,12 @@
     * Responsive
 
 */
+
+/*ChatGPT Changes here*/
+
+/*Ends Here*/
 *{
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 }
 :root {
     --primary_color: #02bddd;
@@ -36,7 +40,7 @@ body {
     font-size: 14px;
     scroll-behavior: smooth;
     color: #9f9f9f;
-    background: #0F0F0F;
+    background: #000000;
     line-height: 19.2px;
 }
 img {
@@ -75,7 +79,7 @@ a {
     height: 100%;
     background-color: #222;
     transform-origin: top;
-    animation: preloader_slide 0.5s ease-in-out 0s 1 normal both
+    animation: preloader_slide 0.2s ease-in-out 0s 1 normal both
 }
 
 .preloader .loader {
@@ -89,14 +93,12 @@ a {
     margin: auto;
     background-color: var(--primary_color);
     transform-origin: left;
-    animation: loader_running 3s ease-in-out 1s infinite normal both
+    animation: loader_running 0.2s ease-in-out 1s infinite normal both
 }
 
 .preloader.off {
-    animation: preloader_slide 0.5s ease-in-out 0s 1 reverse both
+    animation: preloader_slide 0.1s ease-in-out 0s 1 reverse both
 }
-
-
 
 /* # Margin */
 .mt-24 {
@@ -183,6 +185,7 @@ ol {
     background: linear-gradient(to right, #02FD90 10%, #04D1C6 55%, #01A4F9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-top: 40px;
 
 }
 .section-heading img {
@@ -325,8 +328,9 @@ ol {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.1;
-    background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+    opacity: 0.8;
+    /*background: linear-gradient(120deg, rgba(40, 96, 98, 0.3), rgba(0, 229, 173, 0.08));*/
+    background: #000000;
     border-radius: 30px;
 }
 .info-box.about-client-box .clients .client-item h1 {
@@ -417,6 +421,8 @@ ol {
 }
 .header-area .logo img {
     display: block;
+    height: 100px;
+    width: 400px;
 }
 .header-area .navbar {
     margin: 0;
@@ -488,21 +494,23 @@ ol {
     gap: 50px;
 }
 .about-area .about-me-box .img-box {
-    width: 224px;
+    width: 350px; /* Increased width for better aspect ratio handling */
     height: 224px;
     position: relative;
     overflow: hidden;
-    background: #02FD90;
-    background: linear-gradient(to right, #02fd94 0%, #04D1C5 50%, #01A4F9 100%);
-    border-radius: 30px 0 0 30px;
-    flex : auto;
+    background: linear-gradient(to right, #444444 0%, #1f1f1f 50%, #000000 100%);
+    border-radius: 30px; /* Uniform border-radius for a symmetrical look */
+    flex: auto;
 }
+
 .about-area .about-me-box .img-box img {
     display: block;
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+    width: 100%; /* Width set to 100% to fill the container */
+    height: auto; /* Changed to 'auto' for maintaining aspect ratio */
+    object-fit: contain; /* Changed to 'contain' to see the entire image without cropping */
+    border-radius: 30px; /* Match the border-radius of the image with the container */
 }
+
 .about-area .about-me-box .infos {
     padding-top: 30px;
     position: initial;
@@ -524,6 +532,7 @@ ol {
 .about-area .about-me-box .infos p {
     letter-spacing: 0.3px;
     margin: 0;
+    margin-bottom: 20px;
 }
 .about-area .about-me-box .infos .about-btn {
     display: block;
@@ -589,7 +598,7 @@ ol {
     flex: 1;
 }
 .about-area .about-details .about-details-inner {
-    padding: 115px 60px 30px 30px;
+    padding: 30px 60px 30px 30px;
     position: relative;
 }
 .about-area .about-details .about-details-inner img {
@@ -604,11 +613,56 @@ ol {
 }
 .about-area .about-details .about-details-inner p {
     color: #FFFFFF;
-    opacity: 0.8;
+    opacity: 1;
     line-height: 25px;
     margin: 0;
     font-size: 16px;
 }
+
+.about-area .about-details .about-details-inner-skill {
+    padding: 30px 60px 30px 30px;
+    position: relative;
+}
+.about-area .about-details .about-details-inner-skill img {
+    position: absolute;
+    left: 30px;
+    top: 0;
+}
+.about-area .about-details .about-details-inner-skill h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+}
+.about-area .about-details .about-details-inner-skill p {
+    color: #FFFFFF;
+    opacity: 1;
+    line-height: 25px;
+    margin: 0;
+    font-size: 16px;
+}
+
+.about-area .about-details .about-details-inner-skill.skills-list ul {
+    columns: 2; /* Creates two columns */
+    -webkit-columns: 2; /* For Safari and older browsers */
+    -moz-columns: 2; /* For Firefox */
+    list-style-type: none; /* Removes the default list style */
+    padding: 0; /* Removes the default padding */
+    margin: 0; /* Ensures the list aligns nicely within the container */
+}
+
+.about-area .about-details .about-details-inner-skill.skills-list ul li {
+    color: #00e7ab; /* White text color */
+    opacity: 1; /* Slightly transparent text */
+    line-height: 25px; /* Line height for each list item */
+    font-size: 16px; /* Font size for each list item */
+    break-inside: avoid-column; /* Prevents items from being split across columns */
+    -webkit-column-break-inside: avoid; /* For Safari and older browsers */
+    page-break-inside: avoid; /* For Firefox */
+    padding-left: 30px; /* Align text with the rest of the content */
+    margin-bottom: 10px; /* Space between list items */
+}
+
+
 .about-area .about-edc-exp {
     padding: 30px;
 }
@@ -846,8 +900,6 @@ ol {
     color: #0F0F0F;
 }
 
-
-
 /* # Credentials */
 .credential-area {
     padding-top: 80px;
@@ -869,7 +921,7 @@ ol {
     opacity: 0.25;
 }
 .credential-area .credential-sidebar .img-box {
-    background: linear-gradient(90deg, #3C58E3 -15%, #C2EBFF 58%, #5AB5E2 97%);
+    background: linear-gradient(to right, #444444 0%, #1f1f1f 50%, #000000 100%);
     border-radius: 30px;
     margin-bottom: 40px;
 }
@@ -903,6 +955,7 @@ ol {
     font-size: 20px;
     transition: .3s;
 }
+
 .credential-area .credential-sidebar .theme-btn {
     width: 100%;
 }
@@ -1327,7 +1380,8 @@ ol {
 
 /* # Contact */
 .contact-area {
-    padding-top: 80px;
+    padding-top: 40px;
+    padding-left: 40px;
 }
 .contact-area .contact-form {
     position: relative;
