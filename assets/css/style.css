@@ -20,6 +20,22 @@
 */
 
 /*ChatGPT Changes here*/
+h3.gradient-text {
+    font-size: 2em; /* Adjust the font size as needed */
+    background:#03c9ce; /* Your specified gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text color transparent, showing the background */
+    -webkit-text-fill-color: transparent; /* Necessary for some older browsers */
+}
+h2.gradient-text {
+    font-size: 2em; /* Adjust the font size as needed */
+    background:#00e7ab; /* Your specified gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text color transparent, showing the background */
+    -webkit-text-fill-color: transparent; /* Necessary for some older browsers */
+}
 
 /*Ends Here*/
 *{
@@ -645,8 +661,8 @@ ol {
     columns: 2; /* Creates two columns */
     -webkit-columns: 2; /* For Safari and older browsers */
     -moz-columns: 2; /* For Firefox */
-    list-style-type: none; /* Removes the default list style */
-    padding: 0; /* Removes the default padding */
+    list-style-type: disc; /* Removes the default list style */
+    padding: 0 0 0 40px; /* Removes the default padding */
     margin: 0; /* Ensures the list aligns nicely within the container */
 }
 
@@ -718,6 +734,39 @@ ol {
     margin-bottom: 24px;
     padding: 16px 16px 26px 16px;
 }
+.projects-area .project-item.completed h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    font-size: 1.5em; /* Smaller font size */
+    color: #ffffff; /* Soft white for visibility */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Slightly less bold */
+    padding: 7px 5px; /* Reduced padding */
+    background: black;
+    border-radius: 15px; /* Smaller rounded corners */
+}
+
+
+
+.projects-area .project-item.in-progress h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    font-size: 1.5em; /* Smaller font size */
+    color: #ffffff; /* Soft white for visibility */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Slightly less bold */
+    padding: 7px 5px; /* Reduced padding */
+    background: black;
+    border-radius: 15px; /* Smaller rounded corners */
+}
+
+
+
+
 .projects-area .project-item .project-img {
     border-radius: 30px;
     margin-bottom: 13px;
@@ -734,6 +783,7 @@ ol {
     margin-bottom: 2px;
     margin-top: 5px;
 }
+
 .projects-area .project-item .project-info h1 {
     font-size: 22px;
     color: #01a4f9;
@@ -749,7 +799,7 @@ ol {
     margin: 0;
 }
 .projects-area .project-item .project-btn {
-    opacity: 0.2;
+    opacity: 0.5;
     transition: .3s;
     display: inline-block;
 }
